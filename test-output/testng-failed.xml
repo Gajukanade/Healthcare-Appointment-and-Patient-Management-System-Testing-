@@ -6,6 +6,7 @@
       <class name="tests.BaseTest">
         <methods>
           <include name="addPatient"/>
+          <include name="quitBrowser"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.BaseTest -->
