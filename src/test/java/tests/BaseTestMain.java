@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.AddPatient;
+import pages.Appointment;
 
 import java.time.Duration;
 
@@ -16,6 +17,7 @@ public class BaseTestMain  {
     WebDriver driver;
     LoginPage loginPage;
     AddPatient addPatient;
+    Appointment appointment;
 
     @BeforeClass
     public void setup() {
@@ -31,6 +33,7 @@ public class BaseTestMain  {
 
         loginPage = new LoginPage(driver);
         addPatient = new AddPatient(driver);
+        appointment = new Appointment(driver);
     }
 
     @Test(priority = 1)
@@ -58,6 +61,12 @@ public class BaseTestMain  {
         System.out.println("Patient added successfully!");
         Thread.sleep(10000);
     }
+    
+    @Test(priority =3)
+    public void Appointment() {
+    	appointment.Homeclick();
+    }
+    
 
     @AfterClass
     public void quitBrowser() {

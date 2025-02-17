@@ -6,7 +6,7 @@
       <class name="tests.BaseTestMain">
         <methods>
           <include name="quitBrowser"/>
-          <include name="testLogin"/>
+          <include name="Appointment"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.BaseTestMain -->
